@@ -50,7 +50,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
             Yii::$app->user->isGuest
-                ? ['label' => 'Login', 'url' => ['/site/login']]
+            ? ['label' => 'Login', 'url' => ['/site/login']]
                 : '<li class="nav-item">'
                     . Html::beginForm(['/site/logout'])
                     . Html::submitButton(
@@ -75,11 +75,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </div>
 </main>
 
-<footer id="footer" class="mt-auto py-3 bg-light" style="background-color: #212529;" >
+<footer id="footer" class="mt-auto py-3 bg-dark text-light" >
     <div class="container">
         <div class="row text-muted">
-            <div class="col-md-6 text-center text-md-start">&copy; The Martin's House <?= date('Y') ?></div>
-            <div class="col-md-6 text-center text-md-end"><?="I am"?></div>
+            <div class="col-md-6 text-center text-md-start text-light">&copy; The Martin's House <?= date('Y') ?></div>
+            <div class="col-md-6 text-center text-md-end text-light"><?="Home for Peace"?></div>
         </div>
     </div>
 </footer>

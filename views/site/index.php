@@ -22,8 +22,8 @@ $this->title = 'Welcome to the Martin House';
 </div>
 
 <div class="body-content" >
-    <h1>Test</h1>
-<img src="../web/images/night.jpg" alt="" style="width:100px; height:100px;">
+<p><a class="btn btn-outline-secondary" href="#">Go to Galery &raquo;</a></p>
+<!-- <img src="../web/images/night.jpg" alt="" style="width:100px; height:100px;"> -->
 
     <div class="row">
         <div class="col-lg-4 mb-3">
