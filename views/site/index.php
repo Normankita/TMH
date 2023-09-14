@@ -6,23 +6,29 @@
 $this->title = 'Welcome to the Martin House';
 ?>
 <style>
-    body{
-        
-    }
+   .btn-outline-secondary{
+    background-color: rgba(4,4,2,0.6) ;
+    color: beige;
+   }
+   .btn-secondary{
+    background-color: rgba(202, 174, 36,0.4) ;
+    
+   }
+
 </style>
 
 <div class="site-index" >
 
 <div class="jumbotron text-center bg-transparent mt-5 mb-5">
-    <h1 class="display-4">WELCOME TO THE MARTIN' HOUSE DODOMA</h1>
+    <h1 class="display-4">WELCOME TO THE MARTIN'S HOUSE DODOMA</h1>
 
     <p class="lead">The place you may find your inner peace,<br> we are here to serve you</p>
 
-    <p><a class="btn btn-lg btn-success" href="#">Jump to Business</a></p>
+    <p><a class="btn btn-lg btn-secondary"  style="color: black;" href="#">Jump to Business &raquo; &raquo;</a></p>
 </div>
 
-<div class="body-content" >
-<p><a class="btn btn-outline-secondary" href="#">Go to Galery &raquo;</a></p>
+<div class="body-content " >
+<p><a class="btn btn-outline-secondary "  href="#">Go to Galery &raquo;</a></p>
 <!-- <img src="../web/images/night.jpg" alt="" style="width:100px; height:100px;"> -->
 
     <div class="row">
@@ -52,7 +58,7 @@ $this->title = 'Welcome to the Martin House';
             <h2>Our motive</h2>
 
             <p>
-                As The MArtin Houses, we are driven toward provision of better and quality services for our customers. we are emerged from the fastly developing City of Dodoma,
+                As The Martin Houses, we are driven toward provision of better and quality services for our customers. we are emerged from the fastly developing City of Dodoma,
                 expecting that customers will need well assured apartments for the time being
             </p>
 

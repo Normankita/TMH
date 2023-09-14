@@ -93,5 +93,40 @@ a.desc:after {
 }
 
 body {
-    background-image: url("../../images/night.jpg");
+    background-image: url("../../web/images/night.jpg");
+}
+
+.mybutton {
+    color: blue;
+    background-color: #999;
+}
+
+.blur-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    filter: blur(3px);
+    opacity: 0.5;
+    background-color: blue;
+}
+
+#transNo {
+    background-color: blue;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+p {
+    position: relative;
+    z-index: 1;
 }

@@ -29,19 +29,20 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->head() ?>
     <style>
     body{
-        background-image: url("../../images/night.jpg");
+        background-image: url('../../web/images/night.jpg'); background-size: cover; background-position:center;
+        color: #E2DDEF;
     }
 </style>
 </head>
-<body class="d-flex flex-column h-100"style="background-image: url('../web/images/night.jpg'); background-size: cover; background-position:center; color:white;">
+<body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
 
-<header id="header">
+<header id="header" >
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
-        'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top']
+        'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top', 'style'=>'opacity: 0.8']
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
@@ -65,7 +66,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     ?>
 </header>
 
-<main id="main" class="flex-shrink-0" role="main">
+<main id="main" class="flex-shrink-0" role="main" >
     <div class="container">
         <?php if (!empty($this->params['breadcrumbs'])): ?>
             <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
@@ -75,11 +76,11 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     </div>
 </main>
 
-<footer id="footer" class="mt-auto py-3 bg-dark text-light" >
+<footer id="footer" class="mt-auto py-3 bg-dark text-light  " style="opacity: 0.8" >
     <div class="container">
         <div class="row text-muted">
-            <div class="col-md-6 text-center text-md-start text-light">&copy; The Martin's House <?= date('Y') ?></div>
-            <div class="col-md-6 text-center text-md-end text-light"><?="Home for Peace"?></div>
+            <div class="col-md-6 text-center text-md-start text-light">&copy; The Martin's House Dodoma <?= date('Y') ?></div>
+            <div class="col-md-6 text-center text-md-end text-light"><?="Home for Peace..."?></div>
         </div>
     </div>
 </footer>
