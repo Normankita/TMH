@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </u>
         </h3>
         <p>
-        Our inventory includes 3 apartments within Kisasa neighborhoods. each comprising of a Sitting room, one having two bedrooms, the rest having one bedroom each and convertible apartments feature modern furnishings, fast WiFi and fully equipped kitchens. <br>Choose your ideal apartment based on your itinerary for the day.
+        Our inventory includes 3 apartments within Kisasa neighborhoods. each comprising of a Sitting room, one having one bedroom, the rest having two bedrooms each and convertible apartments feature modern furnishings, fast WiFi and fully equipped kitchens. <br>Choose your ideal apartment based on your itinerary for the day.
         </p><br>
         <h3>
         <u>No Packing, No Worry...</u>
@@ -46,7 +46,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 See our photo gallery for a glimpse inside our welcoming and thoughtfully designed temporary homes. Comfort awaits you at an affordable price without long term obligations.
 
-We look forward to assisting with your one day escape plans! Click "Book Now" to check availability and rates starting at just 80000/=Tshs per night. You'll be all set with your Dodoma City homebase in no time.
+We look forward to assisting with your one day escape plans! Click "Book Now" to check availability and rates starting at cheap prices per night. You'll be all set with your Dodoma City homebase in no time.
 
 
         
