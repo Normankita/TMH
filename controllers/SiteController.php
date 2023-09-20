@@ -61,9 +61,7 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index', [
-            'bgImage' => '../images/night.jpg'
-          ]);
+        return $this->render('index');
         
     }
 

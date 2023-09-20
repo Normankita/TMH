@@ -29,7 +29,9 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <?php $this->head() ?>
     <style>
     body{
-        background-image: url('../../web/images/night.jpg'); background-size: cover; background-position:center;
+        background-image: url("../images/night.jpg");
+        background-size: cover; 
+        background-position:center;
         color: #E2DDEF;
     }
 </style>
