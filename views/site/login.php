@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ]); ?>
 
-            <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'style'=>'background-color:rgba(4,4,2,0.8); color:white;']) ?>
+            <?= $form->field($model, 'username')->textInput(['autofocus' => true,   'style'=>'background-color:rgba(4,4,2,0.8); color:white;']) ?>
 
             <?= $form->field($model, 'password')->passwordInput(['style'=>'background-color:rgba(4,4,2,0.8); color:white;']) ?>
 

@@ -126,6 +126,9 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
-
+    public function actionGallery()
+    {
+        return $this->render('gallery');
+    }
     
 }

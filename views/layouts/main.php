@@ -44,17 +44,17 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
-        'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top', 'style'=>'opacity: 0.8']
+        'options' => ['class' => 'navbar-expand-md navbar-dark bg-dark fixed-top btn-group btn-group-toggle','data-toggle'=>'buttons', 'style'=>'opacity: 0.8']
     ]);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Home', 'url' => ['/site/index'], 'options'=>['class'=>'btn btn-secondary active']],
+            ['label' => 'About', 'url' => ['/site/about'],'options'=>['class'=>'btn btn-secondary']],
+            ['label' => 'Contact', 'url' => ['/site/contact'], 'options'=>['class'=>'btn btn-secondary']],
             Yii::$app->user->isGuest
-            ? ['label' => 'Login', 'url' => ['/site/login']]
-                : '<li class="nav-item">'
+            ? ['label' => 'Login', 'url' => ['/site/login'],'options'=>['class'=>'btn btn-secondary']]
+                : '<li class="nav-item float-right btn btn-secondary bg-danger">'
                     . Html::beginForm(['/site/logout'])
                     . Html::submitButton(
                         'Logout (' . Yii::$app->user->identity->username . ')',
