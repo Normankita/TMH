@@ -123,29 +123,34 @@ a.desc:after {
 .btn-outline-secondary {
     background-color: rgba(4, 4, 2, 0.6);
     color: beige;
+    border-color: goldenrod;
 }
 
 .btn-secondary {
     background-color: rgba(202, 174, 36, 0.4);
+    border-color: goldenrod;
 }
 
 .btn-primary {
     background-color: #999;
     width: 80px;
 }
+
+
 /* Contact page CSS */
-.headingTitle{
+
+.headingTitle {
     text-align: center;
     margin-bottom: 50px;
 }
 
-.contactUs{
+.contactUs {
     margin-top: 60px;
-    
 }
+
 .btn-wide {
-    width: 350px; 
+    width: 350px;
     border-radius: 50px;
-    background-color: rgba(202, 174, 36,0.4);
+    background-color: rgba(202, 174, 36, 0.4);
     border-color: transparent;
 }
