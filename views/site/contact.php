@@ -50,7 +50,7 @@ $this->title = 'Contact';
                     <i class="fas fa-envelope"></i>
                     martinshouse@gmai.com.
                 </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d126773.636762776!2d39.256063999999995!3d-6.8091904!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2stz!4v1695269044516!5m2!1sen!2stz" width="350"; height="200"; style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7933.517530735426!2d35.7514798!3d-6.1630533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184de5b3e00e6663%3A0x5f58f682b98e15b!2sThe%20Martin&#39;s%20House%20Dodoma!5e0!3m2!1sen!2stz!4v1695368196660!5m2!1sen!2stz" width="350"; height="200"; style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
             <div class="col-lg-4 contactUs">
