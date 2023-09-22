@@ -1,21 +1,11 @@
 <?php
 
 /** @var yii\web\View $this */
-
+use yii\helpers\Html;
 
 $this->title = 'Welcome to the Martin House';
 ?>
-<style>
-   .btn-outline-secondary{
-    background-color: rgba(4,4,2,0.6) ;
-    color: beige;
-   }
-   .btn-secondary{
-    background-color: rgba(202, 174, 36,0.4) ;
-    
-   }
 
-</style>
 
 <div class="site-index" >
 
@@ -28,9 +18,9 @@ $this->title = 'Welcome to the Martin House';
 </div>
 
 <div class="body-content " >
-<p><a class="btn btn-outline-secondary "  href="#">Go to Galery &raquo;</a></p>
+<p><?= Html::a('Go to Gallery', ['site/gallery'],['class'=>' btn btn-lg btn-outline-secondary']);?>
+</p>
 <!-- <img src="../web/images/night.jpg" alt="" style="width:100px; height:100px;"> -->
-
     <div class="row">
         <div class="col-lg-4 mb-3">
             <h2>Our services</h2>

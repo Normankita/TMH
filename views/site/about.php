@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <i>
         I appreciated the option for such a last minute booking on my layover day in Dodoma City. The apartment had everything I needed to feel right at home between meetings." </i> - our customer, a business traveler.
 
-See our photo gallery for a glimpse inside our welcoming and thoughtfully designed temporary homes. Comfort awaits you at an affordable price without long term obligations.
+See our <?= Html::a('Photo Gallery', ['site/gallery']);?> for a glimpse inside our welcoming and thoughtfully designed temporary homes. Comfort awaits you at an affordable price without long term obligations.
 
 We look forward to assisting with your one day escape plans! Click "Book Now" to check availability and rates starting at cheap prices per night. You'll be all set with your Dodoma City homebase in no time.
 
