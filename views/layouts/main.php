@@ -18,15 +18,20 @@ $this->registerMetaTag(['name' => 'viewport', 'content' => 'width=device-width, 
 $this->registerMetaTag(['name' => 'description', 'content' => $this->params['meta_description'] ?? '']);
 $this->registerMetaTag(['name' => 'keywords', 'content' => $this->params['meta_keywords'] ?? '']);
 $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii::getAlias('@web/favicon.ico')]);
+
+
 ?>
 <?php $this->beginPage() ?>
 
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
 <head >
-
+    <?= Html::cssFile('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css') ?>
+    <script src="<?= Yii::$app->request->baseUrl ?>/js/jquery.js"></script>
+    <script src="<?= Yii::$app->request->baseUrl ?>/js/Custom.js"></script>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    
 </head>
 <body class="d-flex flex-column h-100">
 <?php $this->beginBody() ?>
