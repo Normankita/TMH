@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use yii\helpers\Html;
+use coderius\swiperslider\SwiperSlider;
 
 $this->title = 'Gallery';
 $this->params['breadcrumbs'][] = $this->title;
@@ -13,39 +14,112 @@ $this->params['breadcrumbs'][] = $this->title;
 
      <!--carousel starts here-->
 
- <div class="container flex-column ">
- <div class="carousel slide h-10" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="../../web/images/chair_table.jpg" class="d-block w-100" alt="...">
+ <div class="container flex-column " id="slider">
+ <?= SwiperSlider::widget([
+    // 'on ' . \coderius\swiperslider\SwiperSlider::EVENT_AFTER_REGISTER_DEFAULT_ASSET => function(){
+    //     CustomAsset::register($view);
+    // },
+    'showScrollbar' => true,
+    'slides' => [
+        [
+            'value' => 'The Martin Houses Dodoma',
+            'options' => [
+                'style' => ["background-image" => "url(/images/front.jpg)", "color"=>"blue"]
+            ]
+        ],
+        '<img src="/images/bed.jpg">',
+        '<img src="/images/chair_table.jpg">',
+        '<img src="/images/bed.jpg">',
+        '<img src="/images/kitchen_dim.jpg">',
+        '<img src="/images/pillow.jpg">',
+        '<img src="/images/remote.jpg">',
+    ],
+    // 'assetFromCdn' => true,
+    'clientOptions' => [
+        'slidesPerView' => 2,
+        'spaceBetween'=> 10,
+        'centeredSlides'=> true,
+        'pagination' => [
+            'clickable' => true,
+            'renderBullet' => new \yii\web\JsExpression("function (index, className) {
+                    return '<span class=\"' + className + '\" ><br><b>' + (index + 1) + '</b></span>';
+                },
+            "),
+            ],
+            "scrollbar" => [
+                "el" => SwiperSlider::getItemCssClass(SwiperSlider::SCROLLBAR),
+                "hide" => true,
+            ],
+    ],
+
+    //Global styles to elements. If create styles for all slides
+    'options' => [
+        'styles' => [
+            SwiperSlider::CONTAINER => ["height" => "300px", "margin-top"=>"0px"],
+            SwiperSlider::SLIDE => ["text-align" => "center"],
+        ],
+    ],
+        
+]);
+ ?>
+ </div>   
+</div>
+
+<div class="container-fluid flex box " id="imsect">
+<div class="row row-cols-lg-auto">
+    <div class="col col-lg-3">
+    <img src="/images/split.jpg" alt="the night view" >
     </div>
-    <div class="carousel-item">
-      <img src="../../web/images/bed_pillow.jpg" class="d-block w-100" alt="...">
+    <div class="col col-lg-3">
+        <img src="/images/tag.jpg" alt="" >
     </div>
-    <div class="carousel-item">
-      <img src="../../web/images/bed.jpg" class="d-block w-100" alt="...">
+    <div class="col col-lg-3">
+        <img src="/images/blurry.jpg" alt="">
     </div>
-    <div class="carousel-item">
-      <img src="../../web/images/dressing_table.jpg" class="d-block w-100" alt="...">
+    <div class="col col-lg-3">
+    <img src="/images/chair_table.jpg" alt="">
     </div>
-    <div class="carousel-item">
-      <img src="../../web/images/night.jpg" class="d-block w-100" alt="...">
+</div>
+<div class="row row-cols-lg-auto">
+    <div class="col col-lg-3">
+    <img src="/images/night.jpg" alt="the night view" >
     </div>
-    <div class="carousel-item">
-      <img src="../../web/images/kitchen_dim.jpg" class="d-block w-100" alt="...">
+    <div class="col col-lg-3">
+        <img src="/images/pillow.jpg" alt="" >
     </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <div class="col col-lg-3">
+        <img src="/images/remote.jpg" alt="">
+    </div>
+    <div class="col col-lg-3">
+    <img src="/images/table.jpg" alt="">
+    </div>
+</div>
+<div class="row row-cols-lg-auto">
+    <div class="col col-lg-3">
+    <img src="/images/tv.jpg" alt="the night view" >
+    </div>
+    <div class="col col-lg-3">
+        <img src="/images/kitchen.jpg" alt="" >
+    </div>
+    <div class="col col-lg-3">
+        <img src="/images/chair_table.jpg" alt="">
+    </div>
+    <div class="col col-lg-3">
+    <img src="/images/bed_pillow.jpg" alt="">
+    </div>
+</div>
+<div class="row row-cols-lg-auto">
+    <div class="col col-lg-3">
+    <img src="/images/kitchen_dim.jpg" alt="the night view" >
+    </div>
+    <div class="col col-lg-3">
+        <img src="/images/wall_light.jpg" alt="" >
+    </div>
+    <div class="col col-lg-3">
+        <img src="/images/dressing_table.jpg" alt="">
+    </div>
+    <div class="col col-lg-3">
+    <img src="/images/table.jpg" alt="">
+    </div>
 </div>
  </div>
-
-
-    
-</div>
