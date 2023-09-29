@@ -361,7 +361,3 @@ img {
     border-width: 1px;
     box-shadow: #fdf7f7;
 }
-
- ::placeholder {
-    color: white;
-}
