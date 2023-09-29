@@ -8,7 +8,7 @@
 use yii\bootstrap5\ActiveForm;
 use yii\bootstrap5\Html;
 
-$this->title = 'Login to TMHs';
+$this->title = 'Make Reservations Now';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-login flex-lg-column rounded-5 justify-content-center" style="background-color:rgba(4,4,2,0.5);">
