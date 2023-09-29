@@ -48,7 +48,7 @@ $this->title = 'Contact';
                 </p>
                 <p>
                     <i class="fas fa-envelope"></i>
-                    martinshouse@gmai.com.
+                    martinshouse@gmail.com.
                 </p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7933.517530735426!2d35.7514798!3d-6.1630533!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184de5b3e00e6663%3A0x5f58f682b98e15b!2sThe%20Martin&#39;s%20House%20Dodoma!5e0!3m2!1sen!2stz!4v1695368196660!5m2!1sen!2stz" width="350"; height="200"; style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
@@ -57,13 +57,13 @@ $this->title = 'Contact';
 
                 <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
 
-                    <?= $form->field($model, 'name')->label(false)->textInput(['placeholder' => 'Name']) ?>
+                    <?= $form->field($model, 'name')->label(false)->textInput(['class' => 'custom-input', 'placeholder' => 'Name']) ?>
 
-                    <?= $form->field($model, 'email')->label(false)->textInput(['placeholder' => 'Email'])?>
+                    <?= $form->field($model, 'email')->label(false)->textInput(['class' => 'custom-input','placeholder' => 'Email'])?>
 
                     <!-- <?= $form->field($model, 'subject') ?> -->
 
-                    <?= $form->field($model, 'body')->label(false)->textarea(['rows' => 5,'placeholder' => 'Message'])?>
+                    <?= $form->field($model, 'body')->label(false)->textarea(['class' => 'custom-input','rows' => 5,'placeholder' => 'Message'])?>
 
                     <?= $form->field($model, 'verifyCode')->widget(Captcha::class, [
                         'template' => '<div class="row"><div class="col-lg-4">{image}</div><div class="col-lg-6">{input}</div></div>',
