@@ -10,6 +10,7 @@ use Yii;
  * @property int $house_id
  * @property string $house_name
  * @property string $size
+ * @property string $description
  */
 class House extends \yii\db\ActiveRecord
 {
@@ -27,7 +28,8 @@ class House extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['house_name', 'size'], 'required'],
+            [['house_name', 'size', 'description'], 'required'],
+            [['description'], 'string'],
             [['house_name'], 'string', 'max' => 75],
             [['size'], 'string', 'max' => 50],
         ];
@@ -42,6 +44,7 @@ class House extends \yii\db\ActiveRecord
             'house_id' => 'House ID',
             'house_name' => 'House Name',
             'size' => 'Size',
+            'description' => 'Description',
         ];
     }
 }

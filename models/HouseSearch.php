@@ -18,7 +18,7 @@ class HouseSearch extends House
     {
         return [
             [['house_id'], 'integer'],
-            [['house_name', 'size'], 'safe'],
+            [['house_name', 'size', 'description'], 'safe'],
         ];
     }
 
@@ -62,7 +62,8 @@ class HouseSearch extends House
         ]);
 
         $query->andFilterWhere(['like', 'house_name', $this->house_name])
-            ->andFilterWhere(['like', 'size', $this->size]);
+            ->andFilterWhere(['like', 'size', $this->size])
+            ->andFilterWhere(['like', 'description', $this->description]);
 
         return $dataProvider;
     }

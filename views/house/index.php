@@ -23,6 +23,30 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
+
+
+    <?= Html::button($model->house_id, ['class' => 'btn btn-primary dropdown-toggle', 'data-toggle' => 'dropdown']) ?>
+    <div class="dropdown-menu">
+  <p><?= $model->house_name ?></p>
+  <p><?= $model->size ?></p>
+  <p><?= $model->description ?></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
@@ -32,6 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'house_id',
             'house_name',
             'size',
+            'description:ntext',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, House $model, $key, $index, $column) {

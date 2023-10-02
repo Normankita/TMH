@@ -113,11 +113,11 @@ a.desc:after {
     background-image: inherit;
     filter: blur(3px);
     opacity: 0.5;
-    background-color: blue;
+    background-color: goldenrod;
 }
 
 #transNo {
-    background-color: blue;
+    background-color: goldenrod;
 }
 
 .btn-outline-secondary {
@@ -257,7 +257,7 @@ a.desc:after {
 }
 
 .mybutton {
-    color: blue;
+    color: goldenrod;
     background-color: #999;
 }
 
@@ -270,11 +270,11 @@ a.desc:after {
     background-image: inherit;
     filter: blur(3px);
     opacity: 0.5;
-    background-color: blue;
+    background-color: goldenrod;
 }
 
 #transNo {
-    background-color: blue;
+    background-color: goldenrod;
 }
 
 .btn-outline-secondary {
@@ -360,4 +360,8 @@ img {
     border-style: dotted;
     border-width: 1px;
     box-shadow: #fdf7f7;
+}
+
+.btn:hover {
+    background-color: rgb(126, 96, 21);
 }

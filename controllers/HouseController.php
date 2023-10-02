@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\models\House;
 use app\models\HouseSearch;
+use yii\base\Model;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -36,14 +37,17 @@ class HouseController extends Controller
      *
      * @return string
      */
+
     public function actionIndex()
     {
+        $models = $this->Model::find()->all();     
         $searchModel = new HouseSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'model' => $models,
         ]);
     }
 

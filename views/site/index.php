@@ -14,11 +14,12 @@ $this->title = 'Welcome to the Martin House';
 
     <p class="lead">The place you may find your inner peace,<br> we are here to serve you</p>
 
-    <p><a class="btn btn-lg btn-secondary"  style="color: black;" href="#">Jump to Business &raquo; &raquo;</a></p>
+    <p><?= Html::a('Jump to Business &raquo; &raquo;', ['house/index'],['class'=>'btn btn-lg btn-secondary']);?>
+
 </div>
 
 <div class="body-content " >
-<p><?= Html::a('Go to Gallery', ['site/gallery'],['class'=>' btn btn-lg btn-outline-secondary']);?>
+<p><?= Html::a('Go to Gallery &raquo;', ['site/gallery'],['class'=>' btn btn-lg btn-outline-secondary']);?>
 </p>
 <!-- <img src="../web/images/night.jpg" alt="" style="width:100px; height:100px;"> -->
     <div class="row">

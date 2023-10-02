@@ -11,13 +11,15 @@ use yii\bootstrap5\Html;
 $this->title = 'Login to TMHs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login flex-lg-column rounded-5 justify-content-center" style="background-color:rgba(4,4,2,0.5);">
-    <h1><?= Html::encode($this->title) ?></h1>
+<div class="site-login flex-lg-column rounded-5 d-flex justify-content-center" style="background-color:rgba(4,4,2,0.5); display: flex; justify-content: center;">
+   <div class="mx-auto">
+   <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>Please fill out the following fields to login:</p>
+<p>Please fill out the following fields to login:</p>
+   </div>
 
-    <div class="row">
-        <div class="col-lg-5 ">
+    <div class="row mx-auto">
+        <div class="col-lg-12 ">
 
             <?php $form = ActiveForm::begin([
                 'id' => 'login-form',
