@@ -25,22 +25,12 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 
-    <?= Html::button($model->house_id, ['class' => 'btn btn-primary dropdown-toggle', 'data-toggle' => 'dropdown']) ?>
+    <?= Html::button($model[1]->house_id , ['class' => 'btn btn-primary dropdown-toggle', 'data-toggle' => 'dropdown']) ?>
     <div class="dropdown-menu">
-  <p><?= $model->house_name ?></p>
-  <p><?= $model->size ?></p>
-  <p><?= $model->description ?></p>
+  <p><?= $model[1]->house_name ?></p>
+  <p><?= $model[1]->size ?></p>
+  <p><?= $model[1]->description ?></p>
 </div>
-
-
-
-
-
-
-
-
-
-
 
 
 

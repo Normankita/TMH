@@ -40,7 +40,7 @@ class HouseController extends Controller
 
     public function actionIndex()
     {
-        $models = $this->Model::find()->all();     
+        $models =House::find()->all();    
         $searchModel = new HouseSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
