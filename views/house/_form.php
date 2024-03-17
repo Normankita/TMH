@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'house_name')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'size')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'size')->textInput(['maxlength' => true]); ?>
 
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 

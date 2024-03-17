@@ -11,12 +11,13 @@ use yii\bootstrap5\Html;
 $this->title = 'Login to TMHs';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-login flex-lg-column rounded-5 d-flex justify-content-center" style="background-color:rgba(4,4,2,0.5); display: flex; justify-content: center;">
-   <div class="mx-auto">
-   <h1><?= Html::encode($this->title) ?></h1>
+<div class="site-login flex-lg-column rounded-5 d-flex justify-content-center"
+    style="background-color:rgba(4,4,2,0.5); display: flex; justify-content: center;">
+    <div class="mx-auto">
+        <h1><?= Html::encode($this->title) ?></h1>
 
-<p>Please fill out the following fields to login:</p>
-   </div>
+        <p>Please fill out the following fields to login:</p>
+    </div>
 
     <div class="row mx-auto">
         <div class="col-lg-12 ">
@@ -31,9 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ]); ?>
 
-            <?= $form->field($model, 'username')->textInput(['autofocus' => true, 'style'=>'background-color:rgba(4,4,2,0.8); color:white;']) ?>
+            <?= $form->field($model, 'username')->textInput() ?>
 
-            <?= $form->field($model, 'password')->passwordInput(['style'=>'background-color:rgba(4,4,2,0.8); color:white;']) ?>
+            <?= $form->field($model, 'password')->passwordInput() ?>
 
             <?= $form->field($model, 'rememberMe')->checkbox([
                 'template' => "<div class=\"custom-control custom-checkbox\">{input} {label}</div>\n<div class=\"col-lg-8\">{error}</div>",

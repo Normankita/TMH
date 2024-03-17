@@ -25,19 +25,21 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
 
 <!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>" class="h-100">
-<head >
+
+<head>
     <?= Html::cssFile('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css') ?>
     <script src="<?= Yii::$app->request->baseUrl ?>/js/jquery.js"></script>
     <script src="<?= Yii::$app->request->baseUrl ?>/js/Custom.js"></script>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
-    
-</head>
-<body class="d-flex flex-column h-100">
-<?php $this->beginBody() ?>
 
-<header id="header" >
-    <?php
+</head>
+
+<body class="d-flex flex-column h-100">
+    <?php $this->beginBody() ?>
+
+    <header id="header">
+        <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
@@ -50,41 +52,36 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
             ['label' => 'About', 'url' => ['/site/about'],'options'=>['class'=>'btn btn-secondary']],
             ['label' => 'Contact', 'url' => ['/site/contact'], 'options'=>['class'=>'btn btn-secondary']],
             Yii::$app->user->isGuest
-            ? ['label' => 'Login', 'url' => ['/site/login'],'options'=>['class'=>'btn btn-secondary']]
-                : '<li class="nav-item float-right btn btn-secondary bg-danger">'
-                    . Html::beginForm(['/site/logout'])
-                    . Html::submitButton(
-                        'Logout (' . Yii::$app->user->identity->username . ')',
-                        ['class' => 'nav-link btn btn-link logout']
-                    )
-                    . Html::endForm()
-                    . '</li>'
+            ? ['label' => 'Login', 'url' => ['/site/login'],'options'=>['class'=>'btn btn-secondary', 'id'=>'log']]
+                : '<li class="nav-item float-right btn btn-danger" id="log">'. Html::beginForm(['/site/logout']). Html::submitButton('Logout ('.Yii::$app->user->identity->username . ')', ['class' => 'nav-link btn btn-link logout']). Html::endForm(). '</li>'
         ]
     ]);
     NavBar::end();
     ?>
-</header>
+    </header>
 
-<main id="main" class="flex-shrink-0" role="main" >
-    <div class="container">
-        <?php if (!empty($this->params['breadcrumbs'])): ?>
+    <main id="main" class="flex-shrink-0" role="main">
+        <div class="container">
+            <?php if (!empty($this->params['breadcrumbs'])): ?>
             <?= Breadcrumbs::widget(['links' => $this->params['breadcrumbs']]) ?>
-        <?php endif ?>
-        <?= Alert::widget() ?>
-        <?= $content ?>
-    </div>
-</main>
-
-<footer id="footer" class="mt-auto py-3 bg-dark text-light  " style="opacity: 0.8" >
-    <div class="container">
-        <div class="row text-muted">
-            <div class="col-md-6 text-center text-md-start text-light">&copy; The Martin's House Dodoma <?= date('Y') ?></div>
-            <div class="col-md-6 text-center text-md-end text-light"><?="Home for Peace..."?></div>
+            <?php endif ?>
+            <?= Alert::widget() ?>
+            <?= $content ?>
         </div>
-    </div>
-</footer>
+    </main>
 
-<?php $this->endBody() ?>
+    <footer id="footer" class="mt-auto py-3 bg-dark text-light  " style="opacity: 0.8">
+        <div class="container">
+            <div class="row text-muted">
+                <div class="col-md-6 text-center text-md-start text-light">&copy; The Martin's House Dodoma
+                    <?= date('Y') ?></div>
+                <div class="col-md-6 text-center text-md-end text-light"><?="Home for Peace..."?></div>
+            </div>
+        </div>
+    </footer>
+
+    <?php $this->endBody() ?>
 </body>
+
 </html>
 <?php $this->endPage() ?>

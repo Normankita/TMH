@@ -15,6 +15,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+
+    <p><?= Html::a('Go Back &raquo;', ['house/index'],['class'=>' btn btn-outline-secondary']);?>
+
+
+        <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'house_id',
+            'house_name',
+            'size',
+            'description:ntext',
+        ],'options'=>['style'=>'background-color:rgba(4,4,2,0.8); color:white; padding:30px; height:200px;margin:30px; padding:20px;','class'=>'container-fluid rounded-3']
+    ]) ?>
     <p>
         <?= Html::a('Update', ['update', 'house_id' => $model->house_id], ['class' => 'btn btn-primary']) ?>
         <?= Html::a('Delete', ['delete', 'house_id' => $model->house_id], [
@@ -25,15 +38,5 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ]) ?>
     </p>
-
-    <?= DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'house_id',
-            'house_name',
-            'size',
-            'description:ntext',
-        ],
-    ]) ?>
 
 </div>

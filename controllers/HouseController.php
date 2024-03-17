@@ -4,7 +4,7 @@ namespace app\controllers;
 
 use app\models\House;
 use app\models\HouseSearch;
-use yii\base\Model;
+use yii\data\Pagination;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -37,17 +37,16 @@ class HouseController extends Controller
      *
      * @return string
      */
-
     public function actionIndex()
     {
-        $models =House::find()->all();    
+        
         $searchModel = new HouseSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
+       
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'model' => $models,
         ]);
     }
 
@@ -85,6 +84,7 @@ class HouseController extends Controller
             'model' => $model,
         ]);
     }
+
 
     /**
      * Updates an existing House model.
@@ -134,5 +134,15 @@ class HouseController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+    // this displays houses to the user
+    public function actionListhouse(){
+        $query = House::find();
+        $pagination=new Pagination([
+            'defaultPageSize'=>5,
+            'totalCount'=> $query->count(),
+        ]);
+        $house=$query->orderBy('house_id')->offset($pagination->offset)->limit($pagination->limit)->all();
+        return $this->render('listhouse',['house'=>$house, 'pagination'=>$pagination]);
     }
 }
