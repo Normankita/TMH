@@ -460,12 +460,13 @@ a {
   color: goldenrod;
 }
 .house-index input,
-textarea {
+.house-form textarea {
   background-color: rgba(255, 255, 255, 0.1);
   color: whitesmoke;
   border-color: goldenrod;
   margin: 10px;
 }
+
 .house-index input:focus,
 textarea:focus {
   color: white;
@@ -481,3 +482,6 @@ textarea:focus {
   border: goldenrod;
   border-radius: 23px;
 }
+
+/*Contact page Css */
+
