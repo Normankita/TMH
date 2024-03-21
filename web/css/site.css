@@ -430,7 +430,7 @@ img {
 
 a {
   color: goldenrod;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 /*update house*/
@@ -483,5 +483,12 @@ textarea:focus {
   border-radius: 23px;
 }
 
-/*Contact page Css */
+/* List Houses */
+.house-list a {
+  color: goldenrod;
+}
 
+.house-list tbody {
+  border: goldenrod;
+  border-radius: 23px;
+}

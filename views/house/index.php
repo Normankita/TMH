@@ -14,7 +14,7 @@ $this->title = 'Houses';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="house-index">
-    <div class="umbotron text-center bg-transparent mt-5 mb-5">
+    <div class="container-fluid umbotron text-center mt-5 mb-5 bg-dark rounded-3" style="padding: 20px; opacity: 0.9">
         <h1><?= Html::encode($this->title) ?></h1>
 
         <p>
@@ -27,7 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 return Url::toRoute([$action, 'house_id' => $model->house_id]);
              }
         ],
-    ],'tableOptions' => ['style' => 'background-color:rgba(4,4,2,0.8); color:white;  margin:20px;', 'class' => 'container-fluid rounded-3 border-spacing:5em;']
+    ],'tableOptions' => ['style' => 'opacity: 0.8', 'class' => 'table table-dark table-striped rounded']
 ]); ?>
 
 
