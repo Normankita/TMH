@@ -2,17 +2,16 @@
 
 namespace app\controllers;
 
-use app\models\House;
-use app\models\HouseSearch;
-use yii\data\Pagination;
+use app\models\Users;
+use app\models\UsersSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HouseController implements the CRUD actions for House model.
+ * UsersController implements the CRUD actions for Users model.
  */
-class HouseController extends Controller
+class UsersController extends Controller
 {
     /**
      * @inheritDoc
@@ -33,16 +32,14 @@ class HouseController extends Controller
     }
 
     /**
-     * Lists all House models.
+     * Lists all Users models.
      *
      * @return string
      */
     public function actionIndex()
     {
-        
-        $searchModel = new HouseSearch();
+        $searchModel = new UsersSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
-       
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -51,30 +48,30 @@ class HouseController extends Controller
     }
 
     /**
-     * Displays a single House model.
-     * @param int $house_id House ID
+     * Displays a single Users model.
+     * @param int $user_id User ID
      * @return string
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionView($house_id)
+    public function actionView($user_id)
     {
         return $this->render('view', [
-            'model' => $this->findModel($house_id),
+            'model' => $this->findModel($user_id),
         ]);
     }
 
     /**
-     * Creates a new House model.
+     * Creates a new Users model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return string|\yii\web\Response
      */
     public function actionCreate()
     {
-        $model = new House();
+        $model = new Users();
 
         if ($this->request->isPost) {
             if ($model->load($this->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'house_id' => $model->house_id]);
+                return $this->redirect(['view', 'user_id' => $model->user_id]);
             }
         } else {
             $model->loadDefaultValues();
@@ -85,20 +82,19 @@ class HouseController extends Controller
         ]);
     }
 
-
     /**
-     * Updates an existing House model.
+     * Updates an existing Users model.
      * If update is successful, the browser will be redirected to the 'view' page.
-     * @param int $house_id House ID
+     * @param int $user_id User ID
      * @return string|\yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionUpdate($house_id)
+    public function actionUpdate($user_id)
     {
-        $model = $this->findModel($house_id);
+        $model = $this->findModel($user_id);
 
         if ($this->request->isPost && $model->load($this->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'house_id' => $model->house_id]);
+            return $this->redirect(['view', 'user_id' => $model->user_id]);
         }
 
         return $this->render('update', [
@@ -107,46 +103,32 @@ class HouseController extends Controller
     }
 
     /**
-     * Deletes an existing House model.
+     * Deletes an existing Users model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param int $house_id House ID
+     * @param int $user_id User ID
      * @return \yii\web\Response
      * @throws NotFoundHttpException if the model cannot be found
      */
-    public function actionDelete($house_id)
+    public function actionDelete($user_id)
     {
-        $this->findModel($house_id)->delete();
+        $this->findModel($user_id)->delete();
 
         return $this->redirect(['index']);
     }
 
     /**
-     * Finds the House model based on its primary key value.
+     * Finds the Users model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param int $house_id House ID
-     * @return House the loaded model
+     * @param int $user_id User ID
+     * @return Users the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($house_id)
+    protected function findModel($user_id)
     {
-        if (($model = House::findOne(['house_id' => $house_id])) !== null) {
+        if (($model = Users::findOne(['user_id' => $user_id])) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
-    // this displays houses to the user
-    public function actionListhouse(){
-        $query = House::find();
-        $pagination=new Pagination([
-            'defaultPageSize'=>5,
-            'totalCount'=> $query->count(),
-        ]);
-        $house=$query->orderBy('house_id')->offset($pagination->offset)->limit($pagination->limit)->all();
-        return $this->render('listhouse',['house'=>$house, 'pagination'=>$pagination]);
-    }
-    public function actionTake($house_id) {
-        if (Yii::$app->user->isGuest) {
-        }
-      }
 }

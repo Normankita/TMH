@@ -483,4 +483,11 @@ textarea:focus {
 }
 
 /* List Houses */
+.house-list a {
+  color: goldenrod;
+}
 
+.house-list tbody {
+  border: goldenrod;
+  border-radius: 23px;
+}
