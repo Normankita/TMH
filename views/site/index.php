@@ -53,7 +53,10 @@ $this->title = 'Welcome to the Martin House';
                     customers. we are emerged from the fastly developing City of Dodoma,
                     expecting that customers will need well assured apartments for the time being
                 </p>
-                <p><?= Html::a('Check Apartments &raquo;', ['house/index'],['class'=>' btn btn-outline-secondary']);?>
+                <p>
+                    <?php if(Yii::$app->user->isGuest){
+                       echo Html::a('Check Apartments &raquo;', ['house/listhouse'],['class'=>' btn btn-outline-secondary']);
+                    }else echo Html::a('Check Apartments &raquo;', ['house/index'],['class'=>' btn btn-outline-secondary']); ?>
                 </p>
 
             </div>
