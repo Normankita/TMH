@@ -492,3 +492,9 @@ textarea:focus {
   border: goldenrod;
   border-radius: 23px;
 }
+
+/* main css */
+
+.round-logo {
+  border-radius: 50%;
+}

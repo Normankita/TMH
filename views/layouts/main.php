@@ -32,6 +32,7 @@ $this->registerLinkTag(['rel' => 'icon', 'type' => 'image/x-icon', 'href' => Yii
     <script src="<?= Yii::$app->request->baseUrl ?>/js/Custom.js"></script>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+    <link rel="icon" href="<?= Yii::$app->request->baseUrl ?>/logo.jpg" class="round-logo" type="image/x-icon">
 
 </head>
 
